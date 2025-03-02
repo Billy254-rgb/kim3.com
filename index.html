@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar with Overlay</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <img src="image/CU_LOGO-removebg-preview.png" alt="KMTC Nakuru CU Logo" class="navbar-logo">
+                Kmtc Nakuru Cu
+            </div>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-close" id="close-menu">×</li>
+                <li class="navbar-item"><a href="index.html" class="navbar-links">Home</a></li>
+                <li class="navbar-item"><a href="#eBooks" class="navbar-links">eBooks</a></li>
+                <li class="navbar-item"><a href="#contacts" class="navbar-links">Contacts</a></li>
+                <li class="navbar-item"><a href="#dockets" class="navbar-links">Dockets</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+     
+
+       <!-- Image Slider Section -->
+       <div class="image-slider">
+        <div class="slider-container">
+            <div class="slide active">
+                <img src="image/cu1.jpg" alt="Image 1">
+                <div class="slide-text">
+                    <h1>Welcome to KMTC Nakuru CU</h1>
+                    <p>Your journey to excellence starts here.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="image/cu2.jpg" alt="Image 2">
+                <div class="slide-text">
+                    <h1>Quality Education</h1>
+                    <p>We provide the best learning environment.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="image/cu3.jpg" alt="Image 3">
+                <div class="slide-text">
+                    <h1>Join Us Today</h1>
+                    <p>Become part of our vibrant community.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- Upcoming Events Section -->
+      
+<div class="upcoming-events">
+    <h2>Upcoming Events</h2>
+    <hr class="section-divider">
+    <p>These are our upcoming Events</p>
+
+    <!-- Event Slider -->
+    <div class="event-slider">
+        <!-- Previous Button -->
+        <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+
+        <!-- Event Slides -->
+        <div class="event-slide active">
+            <img src="image/cu1.jpg" alt="Event 1">
+            <div class="event-card">
+            <div class="event-description">
+                <h3>MEGA CRUSADE 2025</h3>
+                <p>The Mega Crusade climaxes the Fusenrollers week!</p>
+                <ul>
+                    <li><strong>HAPPENING:</strong> 2/3/2025</li>
+                    <li><strong>LOCATION:</strong> Within and around Egerton University Njoro Campus</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        
+        
+
+        <div class="event-slide">
+            <img src="image/cu5.jpg" alt="Event 2">
+            <div class="event-card">
+            <div class="event-description">
+                <h3>SUNDAY SERVICE</h3>
+                <p>Join us for our Sunday’s Services</p>
+                <ul>
+                    <li><strong>HAPPENING:</strong> 2/3/2025</li>
+                    <li><strong>LOCATION:</strong> FASS, B1 & B3</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        
+       
+
+        <div class="event-slide">
+            <img src="image/cu4.jpg" alt="Event 3">
+            <div class="event-card">
+            <div class="event-description">
+                <h3>ANNUAL CONFERENCE</h3>
+                <p>Our annual conference brings together students and professionals.</p>
+                <ul>
+                    <li><strong>HAPPENING:</strong> 5/3/2025</li>
+                    <li><strong>LOCATION:</strong> Main Auditorium</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        
+        
+
+        <!-- Next Button -->
+        <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</div>
+
+
+       <!-- Social Media Section -->
+       <!--<div class="social-media">
+        <p>Find Us On:</p>
+        <div class="social-icons">
+            <a href="https://youtube.com" target="_blank" class="social-icon">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" class="social-icon">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://tiktok.com" target="_blank" class="social-icon">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="mailto:example@kmtc.ac.ke" class="social-icon">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>--->
+ 
+
+<button id="scroll-to-top" class="scroll-to-top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<!-- eBooks Section -->
+<section id="eBooks" class="ebooks-section">
+   <div class="ebooks-header">
+        <h1>Welcome to Our e-Library</h1>
+        <hr class="section-divider">
+        <p>Explore our collection of books across various categories.</p>
+    </div>
+    <div class="categories-container">
+    <div class="categories-grid" id="categories-grid">
+    <div class="category-card" onclick="openModal('medical-modal')">
+        <div class="category-card">
+            
+            <h3>Medical</h3>
+            <p>Books on medicine, nursing, and healthcare.</p>
+        </div>
+        <div class="category-card">
+            
+            <h3>Science</h3>
+            <p>Explore the world of science and technology.</p>
+        </div>
+        <div class="category-card">
+            
+            <h3>Literature</h3>
+            <p>Classic and modern literature for all readers.</p>
+        </div>
+        <div class="category-card">
+            
+            <h3>Business</h3>
+            <p>Books on entrepreneurship, finance, and management.</p>
+        </div>
+    </div>
+</div>
+
+<div class="pagination-controls">
+    <span id="category-count"></span>
+    <button id="prev-category" class="pagination-btn">Previous</button>
+    <button id="next-category" class="pagination-btn">Next</button>
+</div>
+</div>
+</section>
+
+<!-- Modal for Medical PDFs -->
+<!---<div id="medical-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('medical-modal')">&times;</span>
+        <h2>Medical eBooks</h2>
+        <div class="pdf-list">
+            <div class="pdf-item">
+                <a href="ebooks/COMMUNITY HEALTH RACHUONYO-1.pdf" target="_blank">
+                    <i class="fas fa-file-pdf"></i> Anatomy and Physiology
+                </a>
+            </div>
+            <div class="pdf-item">
+                <a href="ebooks/DISEASE OUTBREAK.pdf" target="_blank">
+                    <i class="fas fa-file-pdf"></i> Pharmacology Basics
+                </a>
+            </div>
+            <div class="pdf-item">
+                <a href="ebooks/DOC-20250114-WA0001..pdf" target="_blank">
+                    <i class="fas fa-file-pdf"></i> Clinical Medicine
+                </a>
+            </div>
+            <div class="pdf-item">
+                <a href="ebooks/DISEASE OUTBREAK.pdf" target="_blank">
+                    <i class="fas fa-file-pdf"></i> Nursing Care
+                </a>
+            </div>
+            <div class="pdf-item">
+                <a href="ebooks/COMMUNITY HEALTH RACHUONYO-1.pdf" target="_blank">
+                    <i class="fas fa-file-pdf"></i> Medical Ethics
+                </a>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<!-- Modal Template for PDFs -->
+<div id="pdf-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <div class="pdf-scroll-container">
+        <div class="pdf-list" id="pdf-list">
+            <!-- PDF files will be dynamically inserted here -->
+            <a href="ebooks/COMMUNITY HEALTH RACHUONYO-1.pdf" class="pdf-link" target="_blank">
+                <i class="fas fa-file-pdf"></i> 
+            </a>
+            <a href="ebooks/DISEASE OUTBREAK.pdf" class="pdf-link" target="_blank">
+                <i class="fas fa-file-pdf"></i> 
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+   <!-- Footer Section -->
+   <footer class="footer">
+    <div class="footer-content">
+        <!-- Social Media Icons -->
+        <div class="social-media">
+            <a href="https://www.youtube.com/@KmtcNakuruCuOfficial" target="_blank" class="social-icon">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com/@kmtc12ncu2?_t=ZM-8tlpgCwWPMj&_r=1" target="_blank" class="social-icon">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://web.facebook.com/kmtcnakuru.cu/" target="_blank" class="social-icon">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="mailto:kmtcncunakuru@gmail.com" class="social-icon">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+        <!-- Website Information -->
+        <p class="website-info">Website by DB Designers</p>
+
+        <!-- Copyright Message -->
+        <p class="copyright">&copy; 2025 Kmtc Nakuru Cu. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+    
+    
+
+    
+
+    <script>const mobileMenu = document.getElementById('mobile-menu');
+        const navbarMenu = document.querySelector('.navbar-menu');
+        const closeMenu = document.getElementById('close-menu');
+        
+        // Toggle menu on mobile menu button click
+        mobileMenu.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+        });
+        
+        // Close menu on close button click
+        closeMenu.addEventListener('click', () => {
+            navbarMenu.classList.remove('active');
+        });
+        </script>
+
+<!---Image Slider Functionality--->
+   <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+            }
+        });
+    }
+    
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+    
+    // Automatically change slides every 5 seconds
+    setInterval(nextSlide, 5000);
+    
+    // Show the first slide initially
+    showSlide(currentSlide);
+    </script>
+
+<script>
+    // Event Slider Functionality
+const eventSlides = document.querySelectorAll('.event-slide');
+let currentEventSlide = 0;
+
+function showEventSlide(index) {
+    eventSlides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+            slide.classList.add('active');
+        }
+    });
+}
+
+function nextEventSlide() {
+    currentEventSlide = (currentEventSlide + 1) % eventSlides.length;
+    showEventSlide(currentEventSlide);
+}
+
+function prevEventSlide() {
+    currentEventSlide = (currentEventSlide - 1 + eventSlides.length) % eventSlides.length;
+    showEventSlide(currentEventSlide);
+}
+
+// Add event listeners to slider buttons
+document.querySelector('.next-btn').addEventListener('click', nextEventSlide);
+document.querySelector('.prev-btn').addEventListener('click', prevEventSlide);
+
+// Show the first slide initially
+showEventSlide(currentEventSlide);
+</script>
+<script>
+    // Scroll-to-Top Button Functionality
+const scrollToTopButton = document.getElementById('scroll-to-top');
+
+// Show/hide the button based on scroll position
+window.addEventListener('scroll', function () {
+    if (window.scrollY > 50) { // Show button after scrolling 50px
+        scrollToTopButton.classList.add('visible');
+    } else {
+        scrollToTopButton.classList.remove('visible');
+    }
+});
+
+// Scroll to top when the button is clicked
+scrollToTopButton.addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Smooth scroll animation
+    });
+});
+</script>
+
+<script>
+    // Function to open the modal
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = "flex";
+    }
+}
+
+// Function to close the modal
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Close modal when clicking outside the modal content
+window.onclick = function (event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+    }
+};
+</script>
+<!---<script>
+    // Sample categories data
+const categories = [
+    {
+        name: "Medical",
+        image: "image/medical.jpg",
+        description: "Books on medicine, nursing, and healthcare.",
+    },
+    {
+        name: "Science",
+        image: "image/science.jpg",
+        description: "Explore the world of science and technology.",
+    },
+    {
+        name: "Literature",
+        image: "image/literature.jpg",
+        description: "Classic and modern literature for all readers.",
+    },
+    {
+        name: "Business",
+        image: "image/business.jpg",
+        description: "Books on entrepreneurship, finance, and management.",
+    },
+    {
+        name: "History",
+        image: "image/history.jpg",
+        description: "Discover the past with our history collection.",
+    },
+    {
+        name: "Technology",
+        image: "image/technology.jpg",
+        description: "Stay updated with the latest in tech.",
+    },
+    {
+        name: "Art",
+        image: "image/art.jpg",
+        description: "Explore creativity with our art books.",
+    },
+    {
+        name: "Mathematics",
+        image: "image/math.jpg",
+        description: "Master the world of numbers and logic.",
+    },
+    {
+        name: "Philosophy",
+        image: "image/philosophy.jpg",
+        description: "Dive into the world of ideas and wisdom.",
+    },
+   
+];
+
+// Pagination variables
+let currentPage = 1;
+const categoriesPerPage = 3;
+
+// Function to display categories
+function displayCategories(page) {
+    const categoriesGrid = document.getElementById("categories-grid");
+    categoriesGrid.innerHTML = ""; // Clear existing content
+
+    const startIndex = (page - 1) * categoriesPerPage;
+    const endIndex = startIndex + categoriesPerPage;
+
+    categories.slice(startIndex, endIndex).forEach((category) => {
+        const categoryCard = document.createElement("div");
+        categoryCard.classList.add("category-card");
+        categoryCard.innerHTML = `
+            <img src="${category.image}" alt="${category.name}">
+            <h3>${category.name}</h3>
+            <p>${category.description}</p>
+        `;
+        categoriesGrid.appendChild(categoryCard);
+    });
+
+    // Update category count
+    document.getElementById("category-count").textContent = `Page ${page} of ${Math.ceil(categories.length / categoriesPerPage)}`;
+}
+
+// Function to handle pagination
+function updatePagination() {
+    const prevButton = document.getElementById("prev-category");
+    const nextButton = document.getElementById("next-category");
+
+    prevButton.disabled = currentPage === 1;
+    nextButton.disabled = currentPage === Math.ceil(categories.length / categoriesPerPage);
+}
+
+// Event listeners for pagination buttons
+document.getElementById("prev-category").addEventListener("click", () => {
+    if (currentPage > 1) {
+        currentPage--;
+        displayCategories(currentPage);
+        updatePagination();
+    }
+});
+
+document.getElementById("next-category").addEventListener("click", () => {
+    if (currentPage < Math.ceil(categories.length / categoriesPerPage)) {
+        currentPage++;
+        displayCategories(currentPage);
+        updatePagination();
+    }
+});
+
+// Initial load
+displayCategories(currentPage);
+updatePagination();
+</script>-->
+
+<script>
+    // Sample categories data with PDF files
+const categories = [
+    {
+        name: "Prayer Books",
+        description: "Books on medicine, nursing, and healthcare.",
+        pdfs: [
+            { name: "Community health", file: "ebooks/COMMUNITY HEALTH RACHUONYO-1.pdf" },
+            { name: "Pharmacology Basics", file: "pdf/medical-book-2.pdf" },
+            { name: "Clinical Medicine", file: "pdf/medical-book-3.pdf" },
+            { name: "Nursing Care", file: "pdf/medical-book-4.pdf" },
+            { name: "Medical Ethics", file: "pdf/medical-book-5.pdf" },
+        ],
+    },
+    {
+        name: "Science",
+        
+        description: "Explore the world of science and technology.",
+        pdfs: [
+            { name: "Introduction to Physics", file: "pdf/science-book-1.pdf" },
+            { name: "Chemistry Basics", file: "pdf/science-book-2.pdf" },
+            { name: "Biology Essentials", file: "pdf/science-book-3.pdf" },
+        ],
+    },
+    {
+        name: "Literature",
+        
+        description: "Classic and modern literature for all readers.",
+        pdfs: [
+            { name: "Shakespeare's Works", file: "pdf/literature-book-1.pdf" },
+            { name: "Modern Poetry", file: "pdf/literature-book-2.pdf" },
+        ],
+    },
+    {
+        name: "Business",
+        
+        description: "Books on entrepreneurship, finance, and management.",
+        pdfs: [
+            { name: "Business Strategy", file: "pdf/business-book-1.pdf" },
+            { name: "Financial Management", file: "pdf/business-book-2.pdf" },
+        ],
+    },
+    {
+        name: "Bible",
+        
+        description: "Books on entrepreneurship, finance, and management.",
+        pdfs: [
+            { name: "Business Strategy", file: "ebooks/COMMUNITY HEALTH RACHUONYO-1.pdf" },
+            { name: "Financial Management", file: "pdf/business-book-2.pdf" },
+        ],
+    },
+    {
+        name: "Fasting",
+        
+        description: "Books on entrepreneurship, finance, and management.",
+        pdfs: [
+            { name: "Fasting", file: "ebooks/DISEASE OUTBREAK.pdf" },
+            { name: "Financial Management", file: "pdf/business-book-2.pdf" },
+            { name: "Fasting", file: "ebooks/DISEASE OUTBREAK.pdf" },
+            { name: "Financial Management", file: "pdf/business-book-2.pdf" },
+            { name: "Fasting", file: "ebooks/DISEASE OUTBREAK.pdf" },
+            { name: "Financial Management", file: "pdf/business-book-2.pdf" },
+            { name: "Fasting", file: "ebooks/DISEASE OUTBREAK.pdf" },
+            { name: "Financial Management", file: "pdf/business-book-2.pdf" },
+            { name: "Fasting", file: "ebooks/DISEASE OUTBREAK.pdf" },
+            { name: "Financial Management", file: "pdf/business-book-2.pdf" },
+            { name: "Fasting", file: "ebooks/DISEASE OUTBREAK.pdf" },
+            { name: "Financial Management", file: "pdf/business-book-2.pdf" },
+            { name: "Fasting", file: "ebooks/DISEASE OUTBREAK.pdf" },
+            { name: "Financial Management", file: "pdf/business-book-2.pdf" },
+            { name: "Fasting", file: "ebooks/DISEASE OUTBREAK.pdf" },
+            { name: "Financial Management", file: "pdf/business-book-2.pdf" },
+            { name: "Fasting", file: "ebooks/DISEASE OUTBREAK.pdf" },
+            { name: "Financial Management", file: "pdf/business-book-2.pdf" },
+        ],
+    },
+    
+];
+
+// Pagination variables
+let currentPage = 1;
+const categoriesPerPage = 3;
+
+// Function to display categories
+function displayCategories(page) {
+    const categoriesGrid = document.getElementById("categories-grid");
+    categoriesGrid.innerHTML = ""; // Clear existing content
+
+    const startIndex = (page - 1) * categoriesPerPage;
+    const endIndex = startIndex + categoriesPerPage;
+
+    categories.slice(startIndex, endIndex).forEach((category) => {
+        const categoryCard = document.createElement("div");
+        categoryCard.classList.add("category-card");
+        categoryCard.innerHTML = `
+            <h3>${category.name}</h3>
+            <p>${category.description}</p>
+        `;
+        categoryCard.addEventListener("click", () => openModal(category));
+        categoriesGrid.appendChild(categoryCard);
+    });
+
+    // Update category count
+    document.getElementById("category-count").textContent = `Page ${page} of ${Math.ceil(categories.length / categoriesPerPage)}`;
+}
+// Function to open the modal with PDFs
+function openModal(category) {
+    const modal = document.getElementById("pdf-modal");
+    const modalTitle = document.getElementById("modal-title");
+    const pdfList = document.getElementById("pdf-list");
+
+    modalTitle.textContent = `${category.name} eBooks`;
+    pdfList.innerHTML = ""; // Clear existing PDFs
+
+    category.pdfs.forEach((pdf) => {
+        const pdfItem = document.createElement("div");
+        pdfItem.classList.add("pdf-item");
+        pdfItem.innerHTML = `
+            <a href="${pdf.file}" target="_blank">
+                <i class="fas fa-file-pdf"></i>
+                <span>${pdf.name}</span>
+            </a>
+        `;
+        pdfList.appendChild(pdfItem);
+    });
+
+    modal.style.display = "flex";
+}
+
+// Function to close the modal
+function closeModal() {
+    const modal = document.getElementById("pdf-modal");
+    modal.style.display = "none";
+}
+
+// Close modal when clicking outside the modal content
+window.onclick = function (event) {
+    const modal = document.getElementById("pdf-modal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
+
+// Function to handle pagination
+function updatePagination() {
+    const prevButton = document.getElementById("prev-category");
+    const nextButton = document.getElementById("next-category");
+
+    prevButton.disabled = currentPage === 1;
+    nextButton.disabled = currentPage === Math.ceil(categories.length / categoriesPerPage);
+}
+
+// Event listeners for pagination buttons
+document.getElementById("prev-category").addEventListener("click", () => {
+    if (currentPage > 1) {
+        currentPage--;
+        displayCategories(currentPage);
+        updatePagination();
+    }
+});
+
+document.getElementById("next-category").addEventListener("click", () => {
+    if (currentPage < Math.ceil(categories.length / categoriesPerPage)) {
+        currentPage++;
+        displayCategories(currentPage);
+        updatePagination();
+    }
+});
+
+// Initial load
+displayCategories(currentPage);
+updatePagination();
+</script>
+
+   
+        
+</body>
+</html>
